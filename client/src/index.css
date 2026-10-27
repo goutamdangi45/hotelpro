@@ -1,0 +1,55 @@
+:root {
+  --hp-primary: #1e3a8a;
+  --hp-primary-dark: #0f172a;
+  --hp-primary-light: #3b82f6;
+  --hp-accent: #d97706;
+  --hp-accent-light: #fbbf24;
+  --hp-gold: #c59b27;
+  --hp-bg-light: #f8fafc;
+  --hp-surface: #ffffff;
+  --hp-text-dark: #0f172a;
+  --hp-text-muted: #64748b;
+  --hp-border: #e2e8f0;
+  --hp-radius-sm: 8px;
+  --hp-radius-md: 12px;
+  --hp-radius-lg: 16px;
+  --hp-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --hp-shadow-md: 0 4px 14px rgba(0, 0, 0, 0.08);
+  --hp-shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--hp-text-dark);
+  background-color: var(--hp-bg-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, .font-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

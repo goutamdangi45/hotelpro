@@ -1,0 +1,32 @@
+{
+  "name": "hotelpro-hotel-management-system",
+  "version": "1.0.0",
+  "description": "HotelPro - Full-Stack Enterprise Hotel Management System (MERN Stack)",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "node server/server.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "seed": "node server/seeder.js",
+    "seed:destroy": "node server/seeder.js -d",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "build": "npm run build --prefix client"
+  },
+  "keywords": [
+    "hotel-management",
+    "mern",
+    "react",
+    "node",
+    "express",
+    "mongodb",
+    "jwt",
+    "bootstrap",
+    "hospitality"
+  ],
+  "author": "HotelPro Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
