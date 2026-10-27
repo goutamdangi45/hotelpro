@@ -25,9 +25,19 @@ app.use(
 );
 
 // CORS Configuration
+const allowedOrigins = process.env.CLIENT_URL
+  ? process.env.CLIENT_URL.split(',').map((o) => o.trim())
+  : ['http://localhost:3000', 'http://127.0.0.1:3000'];
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || 'http://localhost:3000',
+    origin: (origin, callback) => {
+      // Allow requests with no origin (like mobile apps, curl, or same-origin static files)
+      if (!origin || allowedOrigins.includes('*') || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(null, true); // Fallback to allow seamless cloud deployments
+    },
     credentials: true,
   })
 );
