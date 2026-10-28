@@ -10,6 +10,9 @@ const path = require('path');
 dotenv.config({ path: path.join(__dirname, '.env') });
 dotenv.config();
 
+const connectDB = require('./config/db');
+const errorHandler = require('./middleware/errorHandler');
+
 // Connect to MongoDB
 connectDB();
 
