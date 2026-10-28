@@ -8,6 +8,7 @@
 [![Bootstrap 5](https://img.shields.io/badge/Bootstrap-5.3-purple.svg)](https://getbootstrap.com/)
 [![JWT Auth](https://img.shields.io/badge/JWT-Secure%20RBAC-orange.svg)](https://jwt.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/goutamdangi45/hotelpro)
 
 > **Your ultimate hotel management solution!** Our system streamlines hotel operations with a secure, scalable backend, ensuring efficient booking, guest management, and payment processing. With intuitive interfaces and robust authentication.
 >

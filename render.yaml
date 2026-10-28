@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: hotelpro
+    runtime: node
+    plan: free
+    buildCommand: npm run render-build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        value: mongodb+srv://hoteladmin:Goutam2911@cluster0.pspo9xh.mongodb.net/hotelpro?retryWrites=true&w=majority
+      - key: JWT_SECRET
+        value: hotelpro_super_secret_jwt_key_2026_modern_secure_token
+      - key: JWT_EXPIRE
+        value: 30d
