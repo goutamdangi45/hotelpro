@@ -46,7 +46,11 @@ export const AuthProvider = ({ children }) => {
         return { success: true, user: res.data.user };
       }
     } catch (err) {
-      const message = err.response?.data?.message || 'Login failed. Please check credentials.';
+      const message =
+        err.response?.data?.message ||
+        (err.code === 'ERR_NETWORK' || !err.response
+          ? 'Cannot connect to backend server. Please make sure the backend server is running on port 5000 (npm run server).'
+          : 'Login failed. Please check credentials.');
       setAuthError(message);
       return { success: false, message };
     }

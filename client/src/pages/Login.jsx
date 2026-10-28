@@ -34,11 +34,25 @@ const Login = () => {
     }
   };
 
-  // Quick 1-click demo login filler
-  const handleQuickLogin = (demoEmail, demoPassword) => {
+  // Quick 1-click demo login filler & instant auto-login
+  const handleQuickLogin = async (demoEmail, demoPassword) => {
     setEmail(demoEmail);
     setPassword(demoPassword);
     setError('');
+    setLoading(true);
+
+    const res = await login(demoEmail, demoPassword);
+    setLoading(false);
+
+    if (res.success) {
+      if (res.user.role === 'admin' || res.user.role === 'staff') {
+        navigate('/admin');
+      } else {
+        navigate(from === '/login' ? '/' : from);
+      }
+    } else {
+      setError(res.message);
+    }
   };
 
   return (
