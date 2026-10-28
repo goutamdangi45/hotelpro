@@ -8,7 +8,9 @@ const Payment = require('./models/Payment');
 const Maintenance = require('./models/Maintenance');
 const { sampleUsers, sampleRooms } = require('./data/sampleData');
 
-dotenv.config();
+const path = require('path');
+dotenv.config({ path: path.join(__dirname, '.env') });
+dotenv.config(); // fallback to root .env if present
 
 const importData = async () => {
   try {

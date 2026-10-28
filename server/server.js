@@ -5,10 +5,9 @@ const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 const dotenv = require('dotenv');
 const path = require('path');
-const connectDB = require('./config/db');
-const errorHandler = require('./middleware/errorHandler');
 
-// Load environment variables
+// Load environment variables from server/.env or root .env
+dotenv.config({ path: path.join(__dirname, '.env') });
 dotenv.config();
 
 // Connect to MongoDB
